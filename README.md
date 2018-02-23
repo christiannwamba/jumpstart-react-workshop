@@ -33,7 +33,7 @@ In this workshop, we are going to learn how to build apps with React while ignor
 
 
     **Note**
-    For fancy sake, we are adding a different font called `Lato` on line 6.
+    For sake, we are adding a different font called `Lato`.
 
 2. Open the CSS tab and add the following to it:
 
@@ -68,10 +68,10 @@ In this workshop, we are going to learn how to build apps with React while ignor
     **What is going on?**
 
       1. First, we create a `div` with an id `root`
-      2. Next, we add a `script` tag to contain our JavaScript code. In the JS code, we grab the reference to that div element and pass the reference to a `rootElement` variable (line 3).
-      3. We also create a new `h2` DOM element using `createElement` and pass the element to an `element` variable (line 4).
-      4. On line 5 and 6, we set  text to the new element and a class of container respectively
-      5. Finally, on line 7, we append the `h2` element we to our root `div` element.
+      2. Next, we add a `script` tag to contain our JavaScript code. In the JS code, we grab the reference to that div element and pass the reference to a `rootElement` variable.
+      3. We also create a new `h2` DOM element using `createElement` and pass the element to an `element` variable.
+      4. We then set  text to the new element and a class of container
+      5. Finally, we append the `h2` element we to our root `div` element.
 
     DEMO: https://jsbin.com/pebojug/2/edit?html,js,output
 
@@ -104,12 +104,12 @@ In this workshop, we are going to learn how to build apps with React while ignor
 
     **What’s going on?**
 
-      - We are still grabbing the `root` element (line 1).
-      - On line 3, we use the React’s `createElement` method to create a new element. It takes 3 arguments:
+      - We are still grabbing the `root` element.
+      - We then use the React’s `createElement` method to create a new element. It takes 3 arguments:
         1. The element (eg. `h2`).
         2. Attributes as properties in an object (eg: `className`).
         3. The text content of the element.
-      - Then, at line 9, the render method in `ReactDOM` is used to render the element inside `root`.
+      - Then the render method in `ReactDOM` is used to render the element inside `root`.
 
     **Note**
     This shows we can do the same thing we do with the DOM API using React but with more features and flexibilities which we will see in the rest of this workshop.
@@ -207,7 +207,7 @@ Though it’s 100% possible to write a React app using `createElement`, you can 
 
     What’s happening?
 
-      1. At line 11, we are writing a JSX and rendering this JSX at line 13.
+      1. We are writing a JSX and rendering this JSX.
       2. The `props` object is also passed to the JSX using **spread operators**.
 
 
@@ -350,9 +350,9 @@ States on the other hand gives you the flexibility to store data that can change
 
     **What’s going on?**
 
-      1. Each class makes the `props` and `state` available via `this.props` and `this.state`. As for `props`, you need to let tell the base component from React about them by calling `super(props)` in the constructor (line 12).
+      1. Each class makes the `props` and `state` available via `this.props` and `this.state`. As for `props`, you need to let tell the base component from React about them by calling `super(props)` in the constructor.
       2. The state is created as an object with a `users` property that stores an array of usernames
-      3. At line 22, we render the `Usernames` child component while passing the `users` state to it via the `users` props.
+      3. We render the `Usernames` child component while passing the `users` state to it via the `users` props.
 
 
     DEMO: https://jsbin.com/jilezeq/2/edit?html,js,output
@@ -390,12 +390,12 @@ The most common (if not only) way of collecting inputs and actions from the user
 
     **What’s going on?**
 
-      1. At line 2, we have list of possible new users.
-      2. We create a random number at line 3 by
+      1. We have list of possible new users.
+      2. We create a random number by
         1. Generating a random number between 0 and 1
         2. Multiplying it with the length of the array to create a boundary between 0 and the length of the array (4)
         3. Then we floor the number
-      3. At line 4, we use this random number to get a random user from the array
+      3. We use this random number to get a random user from the array
       4. Finally we set the new state of the `users` array by adding the new user to it.
 
     DEMO: https://jsbin.com/waferog/2/edit?html,js,output
@@ -425,10 +425,10 @@ Having a state with static data doesn’t showcase real life situations. Let’s
     ```
 
     **What's going on?**
-      1. Line 1 declared a method called `componentDidMount`. This method is one of React’s inbuilt methods that are known as **lifecycle methods**. These methods allow you to hook into a React’s component lifecycle from creation to destruction. In our case we need the to make a request once the component s ready (mounted). No need to call this component, React will after this component is mounted
-      2. At line 2, we make a request to the Github server to get a user’s followers. The request is made using Ajax.
-      3. The payload returned has a lot of data but we just need to get the usernames. This is what we are doing at line 4
-      4. We update the state at line 5. **When ever state is updated, the affected components are re-rendered to update the UI**.
+      1. We declare a method called `componentDidMount`. This method is one of React’s inbuilt methods that are known as **lifecycle methods**. These methods allow you to hook into a React’s component lifecycle from creation to destruction. In our case we need the to make a request once the component s ready (mounted). No need to call this component, React will after this component is mounted
+      2. We then make a request to the Github server to get a user’s followers. The request is made using Ajax.
+      3. The payload returned has a lot of data but we just need to get the usernames.
+      4. We update the state. **When ever state is updated, the affected components are re-rendered to update the UI**.
 
     DEMO: https://jsbin.com/hebipux/2/edit?html,js,output
 
