@@ -12,7 +12,7 @@ In this workshop, we are going to learn how to build apps with React while ignor
 
 ## Task 1: Setup Environment
 
-1. Open [JS Bin](http://jsbin.com) and paste the following in the HTML tab 
+1. Open [JS Bin](http://jsbin.com) and paste the following in the HTML tab
 
     ```html
         <!DOCTYPE html>
@@ -28,7 +28,7 @@ In this workshop, we are going to learn how to build apps with React while ignor
         <!--   Coming soon... -->
 
         </body>
-        </html> 
+        </html>
     ```
 
 
@@ -43,7 +43,7 @@ In this workshop, we are going to learn how to build apps with React while ignor
         }
     ```
 
-    **Note** 
+    **Note**
     This adds the font to the body tag of your project.
 
     DEMO: https://jsbin.com/damayit/1/edit?html,js,output
@@ -104,12 +104,12 @@ In this workshop, we are going to learn how to build apps with React while ignor
 
     **What’s going on?**
 
-      1. We are still grabbing the `root` element (line 1).
-      2. On line 3, we use the React’s `createElement` method to create a new element. It takes 3 arguments:
+      - We are still grabbing the `root` element (line 1).
+      - On line 3, we use the React’s `createElement` method to create a new element. It takes 3 arguments:
         1. The element (eg. `h2`).
         2. Attributes as properties in an object (eg: `className`).
         3. The text content of the element.
-      3. Then, at line 9, the render method in `ReactDOM` is used to render the element inside `root`.
+      - Then, at line 9, the render method in `ReactDOM` is used to render the element inside `root`.
 
     **Note**
     This shows we can do the same thing we do with the DOM API using React but with more features and flexibilities which we will see in the rest of this workshop.
@@ -207,7 +207,7 @@ Though it’s 100% possible to write a React app using `createElement`, you can 
 
     What’s happening?
 
-      1. At line 11, we are writing a JSX and rendering this JSX at line 13. 
+      1. At line 11, we are writing a JSX and rendering this JSX at line 13.
       2. The `props` object is also passed to the JSX using **spread operators**.
 
 
@@ -233,7 +233,7 @@ React is a component-based library, therefore, it encourages the component archi
         <div>
           <h2 className="greeting">Hello World from React</h2>
           <h2 className="greeting">Goodbye from React</h2>
-        </div> 
+        </div>
     ```
 
     We are repeating the `h2` tag along with all of its properties. Why don’t we create a `greating` component that we can reuse?
@@ -241,7 +241,7 @@ React is a component-based library, therefore, it encourages the component archi
 
 2. Create a function to to return this elements as JSX:
 
-    ```javascript 
+    ```javascript
        const rootElement = document.getElementById('root');
 
         const greeting = (props) => <h2 className="greeting">{props.children}</h2>
@@ -374,7 +374,7 @@ The most common (if not only) way of collecting inputs and actions from the user
            }
     ```
 
-    We now have a button that we attached an `onClick` event to. This event takes a function to call when the button is clicked. In our case, we care calling an instance method named `addRandomUser`. 
+    We now have a button that we attached an `onClick` event to. This event takes a function to call when the button is clicked. In our case, we care calling an instance method named `addRandomUser`.
 
 
 2. Add this method to your class:
@@ -391,7 +391,7 @@ The most common (if not only) way of collecting inputs and actions from the user
     **What’s going on?**
 
       1. At line 2, we have list of possible new users.
-      2. We create a random number at line 3 by 
+      2. We create a random number at line 3 by
         1. Generating a random number between 0 and 1
         2. Multiplying it with the length of the array to create a boundary between 0 and the length of the array (4)
         3. Then we floor the number
