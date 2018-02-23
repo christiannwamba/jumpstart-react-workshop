@@ -459,7 +459,7 @@ The Create React App (CRA) CLI tool simplifies this process.
 
     ```bash
         npm install axios --save
-```
+    ```
 
 
 5. Open the file in a code editor, head to the `src` folder, and add a new file named `Usernames.js` with the following content:
