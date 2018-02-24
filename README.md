@@ -1,4 +1,4 @@
-# Jump Start React
+# Jump Start React (http://bit.ly/jumpstart-react)
 
 In this workshop, we are going to learn how to build apps with React while ignoring all the overwhelming distractions on the web. No build tools for now. We are all going to code together, right in the browser using [JS Bin](http://jsbin.com/). Of course, you need to build tools in real life apps so I am going to show you how to use them at the end of this workshop.
 
