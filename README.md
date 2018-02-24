@@ -94,9 +94,9 @@ In this workshop, we are going to learn how to build apps with React while ignor
     const rootElement = document.getElementById('root');
 
         const element = React.createElement(
-          'h2', // element.createElement('h2)
+          'h2', // element.createElement('h2')
           {className: 'container'}, // element.className
-          'Hello World from React' // element,textContent
+          'Hello World from React' // element.textContent
         );
 
         ReactDOM.render(element, rootElement);
@@ -105,7 +105,7 @@ In this workshop, we are going to learn how to build apps with React while ignor
     **What’s going on?**
 
       - We are still grabbing the `root` element.
-      - We then use the React’s `createElement` method to create a new element. It takes 3 arguments:
+      - We then use the React’s `createElement` method to create a new element. It takes at least 3 arguments:
         1. The element (eg. `h2`).
         2. Attributes as properties in an object (eg: `className`).
         3. The text content of the element.
@@ -117,7 +117,7 @@ In this workshop, we are going to learn how to build apps with React while ignor
     DEMO: https://jsbin.com/pebojug/14/edit?html,js,output
 
 
-5. Log the value of `element` to the console, let’s inspect it and see what looks like. Paste this below the `element` variable declaration.
+5. Log the value of `element` to the console, let’s inspect it and see what it looks like. Paste this below the `element` variable declaration.
 
     ```html
     console.log(element);
@@ -168,7 +168,7 @@ In this workshop, we are going to learn how to build apps with React while ignor
     DEMO: https://jsbin.com/pebojug/15/edit?html,js,output
 
     **Note**
-    A React element can also be a one off the items in `children` array. This way you can start building nested DOM trees.
+    A React element can also be one of the items in `children` array. This way you can start building nested DOM trees.
 
 
 ## Task 3: Meet JSX
@@ -224,7 +224,7 @@ Though it’s 100% possible to write a React app using `createElement`, you can 
 
 ## TASK 4: Composing Components
 
-React is a component-based library, therefore, it encourages the component architectural pattern. Components allows you to build small reusable UI elements and UI widgets then **compose** them to make a full fleshed app. Components are not exclusive to React. It’s a trending pattern for building engineering projects.
+React is a component-based library, therefore, it encourages the component architectural pattern. Components allows you to build small reusable UI elements and UI widgets then **compose** them to make a fully-fledged app. Components are not exclusive to React. It’s a trending pattern for building engineering projects.
 
 
 1. Assuming you had the following JSX that has a repeating pattern:
@@ -239,7 +239,7 @@ React is a component-based library, therefore, it encourages the component archi
     We are repeating the `h2` tag along with all of its properties. Why don’t we create a `greating` component that we can reuse?
 
 
-2. Create a function to to return this elements as JSX:
+2. Create a function to to return this element as JSX:
 
     ```javascript
        const rootElement = document.getElementById('root');
@@ -280,9 +280,9 @@ React is a component-based library, therefore, it encourages the component archi
 
 ## Task 5: Props and State
 
-To compose components, you need a way to move shared data from one component to another. We have fairly see properties which is only perfect for data that a component must not mutate. Props can only be rendered without changing its value.
+To compose components, you need a way to move shared data from one component to another. We have fairly seen properties which is only perfect for data that a component must not mutate. Props can only be rendered without changing their value.
 
-States on the other hand gives you the flexibility to store data that can change and probably render this data directly or pass them down to child components as props. States control the behavior of a component.
+State on the other hand gives you the flexibility to store data that can change and probably render this data directly or pass them down to child components as props. State control the behavior of a component.
 
 
 1. To use state, we need to make use of a class component. Replace the content of your JS with the following:
@@ -313,7 +313,7 @@ States on the other hand gives you the flexibility to store data that can change
 
 
 2. Take a close look at the two components and figure out what data might change in the future.
-3. The list of usernames. Update the code to store this list in a state:
+3. The list of usernames. Update the code to store this list in the state:
 
     ```javascript
         const rootElement = document.getElementById('root');
@@ -360,7 +360,7 @@ States on the other hand gives you the flexibility to store data that can change
 
 ## Task 6: Events
 
-The most common (if not only) way of collecting inputs and actions from the user of our apps is through events. Let’s see how we can collect actions in React apps.
+The most common (if not only) way of collecting input and actions from the user of our apps is through events. Let’s see how we can collect actions in React apps.
 
 
 1. Update the render method in the previous task to look like the following:
@@ -402,7 +402,7 @@ The most common (if not only) way of collecting inputs and actions from the user
 
 ## Task 7: Networking in React
 
-Having a state with static data doesn’t showcase real life situations. Let’s see how we can make a request to a server hosted somewhere else for some data and then render the data in our page.
+Having the state with static data doesn’t showcase real life situations. Let’s see how we can make a request to a server hosted somewhere else for some data and then render the data on our page.
 
 
 1. Import the axios library to your HTML:
@@ -425,10 +425,10 @@ Having a state with static data doesn’t showcase real life situations. Let’s
     ```
 
     **What's going on?**
-      1. We declare a method called `componentDidMount`. This method is one of React’s inbuilt methods that are known as **lifecycle methods**. These methods allow you to hook into a React’s component lifecycle from creation to destruction. In our case we need the to make a request once the component s ready (mounted). No need to call this component, React will after this component is mounted
+      1. We declare a method called `componentDidMount`. This method is one of React’s inbuilt methods that are known as **lifecycle methods**. These methods allow you to hook into a React’s component lifecycle from creation to destruction. In our case we need the method to make a request once the component is ready (mounted). No need to call this method, React will call it after this component is mounted.
       2. We then make a request to the Github server to get a user’s followers. The request is made using Ajax.
       3. The payload returned has a lot of data but we just need to get the usernames.
-      4. We update the state. **When ever state is updated, the affected components are re-rendered to update the UI**.
+      4. We update the state. **Whenever state is updated, the affected components are re-rendered to update the UI**.
 
     DEMO: https://jsbin.com/hebipux/2/edit?html,js,output
 
@@ -443,7 +443,7 @@ The Create React App (CRA) CLI tool simplifies this process.
 1. Install [Node.js](https://nodejs.org)
 2. Install the CLI tool
 
-    ```bash    
+    ```bash
         npm install -g create-react-app
     ```
 
